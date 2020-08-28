@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlReaderWriter", "HtmlReaderWriter\HtmlReaderWriter.csproj", "{14C3D1EE-571D-4A47-B581-53EE797B3F41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlReaderWriter.Test", "HtmlReaderWriter.Test\HtmlReaderWriter.Test.csproj", "{47439A26-47AA-44A5-B730-4CF67891E3EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14C3D1EE-571D-4A47-B581-53EE797B3F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C3D1EE-571D-4A47-B581-53EE797B3F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C3D1EE-571D-4A47-B581-53EE797B3F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C3D1EE-571D-4A47-B581-53EE797B3F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47439A26-47AA-44A5-B730-4CF67891E3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47439A26-47AA-44A5-B730-4CF67891E3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47439A26-47AA-44A5-B730-4CF67891E3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47439A26-47AA-44A5-B730-4CF67891E3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7CC60C9-87F8-4341-8D8E-7E2DF6DEAC57}
+	EndGlobalSection
+EndGlobal

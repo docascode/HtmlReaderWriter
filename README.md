@@ -1,2 +1,3 @@
-# HtmlReader
-Fast forward only HTML reader
+# HtmlReaderWriter
+
+Fast, lightweight HTML parser with accurate source information.
