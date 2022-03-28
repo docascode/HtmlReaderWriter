@@ -1,12 +1,15 @@
 trigger:
-- main
+  branches:
+    include:
+      - main
+  tags:
+    include:
+    - '*'
 pr:
 - main
 
 variables:
 - group: docfx-v2-pipeline-kv
-- name: version
-  value: 1.0.0
 
 jobs:
 - job: build
@@ -32,7 +35,7 @@ jobs:
 
 - job: publish
   dependsOn: build
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
   pool:
     vmImage: windows-latest
   steps:
@@ -51,7 +54,8 @@ jobs:
 
   - script: >
       dotnet pack -c Release -o $(Agent.TempDirectory)/nuget
-      /p:Version=$(version) /p:InformationalVersion=$(version)-$(Build.SourceVersion)
+      /p:Version=$(Build.SourceBranchName)
+      /p:InformationalVersion=$(Build.SourceBranchName)-$(Build.SourceVersion)
     displayName: dotnet pack
 
   - task: EsrpCodeSigning@1
