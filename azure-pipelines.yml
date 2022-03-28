@@ -26,7 +26,7 @@ jobs:
     displayName: dotnet test
 
   - powershell: |
-      $version = "$(Build.SourceVersion)".substring(1)
+      $version = "$(Build.SourceBranchName)".substring(1)
       dotnet pack -c Release -o $(Agent.TempDirectory)/nuget /p:Version=$version /p:InformationalVersion=$version-$(Build.SourceVersion)
     displayName: dotnet pack
 
