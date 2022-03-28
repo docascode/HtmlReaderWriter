@@ -8,20 +8,18 @@
     <LangVersion>Latest</LangVersion>
     <NoWarn>NU5048</NoWarn>
     <TreatWarningsAsErrors Condition="'$(Configuration)'=='Release'">true</TreatWarningsAsErrors>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
 
-    <!-- NuGet properties -->
-    <Copyright>Copyright (c) Yufei Huang.</Copyright>
-    <Authors>Yufei Huang</Authors>
-    <Company>.NET Foundation</Company>
-    <Product>HtmlReader</Product>
+  <PropertyGroup>
+    <Authors>Microsoft</Authors>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <Description>Fast, lightweight HTML parser with accurate source information.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/yufeih/HtmlReader</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/docascode/HtmlReaderWriter</PackageProjectUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources> 
   </PropertyGroup>
 
   <ItemGroup>
