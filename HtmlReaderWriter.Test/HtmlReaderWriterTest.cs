@@ -33,6 +33,7 @@ namespace HtmlReaderWriter
         [InlineData("<a b='cd>", "Comment:<a b='cd>")]
         [InlineData("<a b=\"cd>", "Comment:<a b=\"cd>")]
         [InlineData("<!-- <p><a>Visual C++</a></p> -->", "Comment:<!-- <p><a>Visual C++</a></p> -->")]
+        [InlineData("<!NOTE]", "Comment:<!NOTE]")]
 
         // StartTag
         [InlineData("<a>", "StartTag:a")]

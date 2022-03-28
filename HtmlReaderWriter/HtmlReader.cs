@@ -371,6 +371,7 @@ namespace HtmlReaderWriter
                 switch (Current())
                 {
                     case '>':
+                    case '\0':
                         Consume();
                         return;
 
