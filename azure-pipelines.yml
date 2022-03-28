@@ -1,7 +1,7 @@
 trigger:
   tags:
     include:
-    - '*'
+    - 'v*'
 
 variables:
 - group: docfx-v2-pipeline-kv
@@ -25,10 +25,9 @@ jobs:
   - script: dotnet test -c Release
     displayName: dotnet test
 
-  - script: >
-      dotnet pack -c Release -o $(Agent.TempDirectory)/nuget
-      /p:Version=$(Build.SourceBranchName)
-      /p:InformationalVersion=$(Build.SourceBranchName)-$(Build.SourceVersion)
+  - script: |
+      $version = "$(Build.SourceVersion)".substring(1)
+      dotnet pack -c Release -o $(Agent.TempDirectory)/nuget /p:Version=$(version) /p:InformationalVersion=$(version)-$(Build.SourceVersion)
     displayName: dotnet pack
 
   - task: EsrpCodeSigning@1
