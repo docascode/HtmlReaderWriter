@@ -25,9 +25,9 @@ jobs:
   - script: dotnet test -c Release
     displayName: dotnet test
 
-  - script: |
+  - powershell: |
       $version = "$(Build.SourceVersion)".substring(1)
-      dotnet pack -c Release -o $(Agent.TempDirectory)/nuget /p:Version=$(version) /p:InformationalVersion=$(version)-$(Build.SourceVersion)
+      dotnet pack -c Release -o $(Agent.TempDirectory)/nuget /p:Version=$version /p:InformationalVersion=$version-$(Build.SourceVersion)
     displayName: dotnet pack
 
   - task: EsrpCodeSigning@1
